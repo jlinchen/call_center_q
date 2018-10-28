@@ -37,5 +37,6 @@ class TestCallCenterQ < Test::Unit::TestCase
     # -> average_current_serve_time: 1/3, 2/3, 3/3, 4/3
     assert_equal([0.5, 1, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5], q.queues.map(&:average_current_waiting_time))
     assert_equal([0, 0, 0, 0, 0, 0, 1/3.0, 2/3.0, 1, 4/3.0], q.queues.map(&:average_current_serve_time))
+    puts q.print_queues
   end
 end
